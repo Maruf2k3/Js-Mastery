@@ -3,6 +3,8 @@
 let lastName = "Rahman";
 let firstName = "Maruf";
 
+//String Methods
+
 //its same as firstName + "" + lastName
 let fullName = firstName.concat(lastName);
 console.log(fullName);
@@ -40,3 +42,7 @@ console.log(fullNameDoIncludeM);
 let newFullName = "           Maruf Rahman        ";
 let trimedNewFullName = newFullName.trim();
 console.log(trimedNewFullName);
+
+//Template Strings
+//Using js variable in strings
+console.log(`Hello I am ${firstName} ${lastName}. Happy to be here!`);
