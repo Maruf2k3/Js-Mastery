@@ -10,8 +10,25 @@ const setInterValEx = setInterval(() => {
 // -> The setTimeout function is used to execute a function or a block of code after a specified delay. It takes two arguments: the function or code to be executed and the time delay (in milliseconds) before the execution.
 
 // The setInterval function will continue to execute the specified code at the specified interval until it is stopped using the clearInterval function.
-
 const setTimeOutEx = setTimeout(() => {
   clearInterval(setInterValEx);
   console.log("The exicution is done!");
 }, 6000);
+
+//A NewYear counter ex:
+
+const newYearCounter = (startTime) => {
+  let count = startTime;
+
+  const timeIntervel = setInterval(() => {
+    console.log(count);
+    count--;
+
+    if (count <= 0) {
+      console.log("Happy New Year!");
+      clearInterval(timeIntervel);
+    }
+  }, 1000);
+};
+
+newYearCounter(10);
