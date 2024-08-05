@@ -1,55 +1,96 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5e8c7;
+  color: #333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.left, .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.left form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.left form div label {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #7d5a50;
+}
+
+.left form div input, .left form div select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 300px;
+  height: 300px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #d17a22;
+}
+
+.card-content p {
+  margin: 10px 0;
+  color: #555;
+}
+
+@media (min-width: 600px) {
   main {
-    display: flex;
-    height: 100vh;
+    flex-direction: row;
   }
-  
-  .left {
-    flex: 1;
+
+  .left, .right {
+    flex: 1 1 50%;
   }
-  
-  .right {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+@media (min-width: 900px) {
+  .left, .right {
+    flex: 1 1 50%;
   }
-  
-  .card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-  }
-  
-  .card img {
-    width: 100%;
+
+  main {
     height: auto;
+    min-height: 100vh;
   }
-  
-  .card-content {
-    padding: 16px;
-  }
-  
-  .card-content h2 {
-    margin: 0 0 8px 0;
-    font-size: 24px;
-  }
-  
-  .card-content p {
-    margin: 8px 0;
-    color: #555;
-  }
-  
+}
